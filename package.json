@@ -6,7 +6,9 @@
   "author": "Dương Đỗ <dustin.do95@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register -r ./dotenv src/index.ts"
+    "start": "NODE_ENV=development ts-node-dev --respawn --transpileOnly -r tsconfig-paths/register -r ./dotenv src/index.ts",
+    "build": "tsc",
+    "start:production": "NODE_ENV=production NODE_PATH=dist node -r ./dotenv dist/index"
   },
   "dependencies": {
     "aws-sdk": "^2.419.0",
@@ -36,7 +38,6 @@
     "ts-node-dev": "^1.0.0-pre.32",
     "tsconfig-paths": "^3.8.0",
     "tslint": "^5.13.1",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.3333"
+    "tslint-config-prettier": "^1.18.0"
   }
 }
